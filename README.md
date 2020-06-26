@@ -1,4 +1,7 @@
-# Reinforcement Learning(RL)
+# Background and Motivation
+In the future, my research is related to production scheduling and Reinforcement Learning (RL). The [following paper](https://www.semanticscholar.org/paper/A-REINFORCEMENT-LEARNING-APPROACH-TO-SCHEDULING-Roh-Lee/b61d28e723b9b29b876813226a21d55088c4cdef)  will give me some inspiration.
+First, I will mention the base idea of Reinforcement Learning. Secondly, introduce the backgroud and the methodology of [the paper](https://www.semanticscholar.org/paper/A-REINFORCEMENT-LEARNING-APPROACH-TO-SCHEDULING-Roh-Lee/b61d28e723b9b29b876813226a21d55088c4cdef). Make some comments finally.
+# Reinforcement Learning (RL)
 RL is known as a semi-supervised learning model in machine learning, 
 is a technique to learn by interacting with its environment. The agent receives rewards by performing correctly and penalties for performing incorrectly. 
 The agent learns without intervention from a human by maximizing its reward and minimizing its penalty. 
@@ -35,5 +38,8 @@ First, the state and action will be defined. The state is set to (𝑊, 𝐶1, �
 
 Second, the invalid action and deadlock action will be eliminate. To eliminate the invalid action for the current state, the agent requests theenvironment for the results for all the actions, then holds valid actions. After agent takes the valid action, cause the next state does't has the valid state, is called deadlock action.
 
-Third, the agent will take the Q-learning algorithm to find the best action for each state.
+Third, the agent will take the [Q-learning algorithm](https://github.com/yuwen-teng/ORA/blob/master/Q-Learning%20Algorithm.PNG) to find the best action for each state. 
 
+## Comment
+After reading this paper, I do the integration of this [methodology](https://github.com/yuwen-teng/ORA/blob/master/The%20procedure%20of%20methodology.png). Because the dimension of the state and the action is complicated, Roh and Lee removed some invalid actions and deadlock actions before the Q-learning algorithm. This is more fficient and reduce the dimension indeed. The more cluster tools, the higher dimension. When facing the real situation, using this methodology may spend less time. However, this paper 
+simulate the enviroment instead of real world cluster tools. This may cause unrealistic conditions. I think the method of reducing dimension is useful for Reinforcement Learning.
